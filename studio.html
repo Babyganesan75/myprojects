@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Think Verse Music</title>
+    <link rel="icon" type="image/jpeg" href="tv_logo.jpeg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CDN -->
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-gradient {
+      background: linear-gradient(45deg, #f12711, #f5af19);
+      border: none;
+      color: #fff;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .navbar-brand img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .nav-link {
+      color: #fff !important;
+      margin-left: 15px;
+    }
+    .card-custom {
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: 0.3s ease-in-out;
+    }
+    .card-custom:hover {
+      transform: scale(1.03);
+    }
+    .about { background: #fdf2e9; padding: 60px 20px; }
+    .services { background: #e8f5e9; padding: 60px 20px; }
+    .portfolio { background: #f3e5f5; padding: 60px 20px; }
+    .contact { background: #e3f2fd; padding: 60px 20px; }
+    footer { background: #1c2331; color: #ccc; text-align: center; padding: 20px; }
+
+    /* Floating Icon Styles */
+    .floating-icon {
+      position: fixed;
+      font-size: 24px;
+      z-index: 1000;
+      animation: floatUp 5s linear forwards;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+    #offerPopup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1050;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+ /* Add this to your existing styles */
+ .social-links {
+    display: grid;
+    justify-content: center;
+    font-size: 18px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.social-link i {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+.social-link:hover i {
+  font-size: 28px;
+}
+.social-link:hover {
+  transform: scale(1.05);
+}
+    .facebook { color: #1877f2; }
+    .twitter { color: #1da1f2; }
+    .instagram { color: #e1306c; }
+    .youtube { color: #ff0000; }
+
+    .events-services {
+  background-color: #f5f0fa;
+  color: #333;
+}
+.btn-gradient {
+  background: linear-gradient(to right, #f12711, #f5af19);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.event-services .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-img-top {
+      height: 150px;
+    }
+    .bg-dark{
+      background-color: rgb(69 73 78) !important
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="tv_logo.jpeg" alt="Logo">
+      <strong>Think Verse Music</strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Offer Bar -->
+<div class="offer-bar py-2 px-3 text-center">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      🎬 Full Movie - 30% OFF! &nbsp;&nbsp;&nbsp; 🎧 Album Mixing - 20% OFF! &nbsp;&nbsp;&nbsp; 🥁 Music Video Production - 15% OFF! &nbsp;&nbsp;&nbsp; 🔊 Audio Mastering - 10% OFF!
+    </marquee>
+  </div>
+  
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Think Verse Music</h1>
+    <p>All types of Sound Engineering, Music Editing, Mixing & Mastering Services</p>
+    <a href="#services" class="btn btn-gradient mt-3 px-4 py-2">Explore Services</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title text-center">About Us</h2>
+      <p class="text-center">
+        <strong>Think Verse Music</strong> is not just a sound studio — it's a creative powerhouse where ideas are transformed into audio experiences that inspire, entertain, and captivate. Founded with a mission to deliver world-class audio solutions, we combine innovation, emotion, and technology to produce music and sound that resonates deeply with audiences.
+      </p>
+      <p class="text-center mt-3">
+        With a team of seasoned sound engineers, composers, producers, and voice artists, we bring unmatched expertise in various domains such as music production, audio post-production, mixing, mastering, and background scoring. Whether it's crafting the perfect track for a commercial, building atmospheric BGM for short films, or fine-tuning your podcast audio — we ensure excellence from the first note to the final master.
+      </p>
+      <p class="text-center mt-3">
+        Our studio is equipped with state-of-the-art technology and acoustically treated rooms to deliver pristine sound quality for every project. At Think Verse Music, we believe every sound tells a story, and we're passionate about helping our clients tell theirs with clarity and creativity.
+      </p>
+      <p class="text-center mt-3">
+        We’ve had the privilege of working with independent artists, filmmakers, startups, and brands across industries. What sets us apart is our attention to detail, personalized approach, and commitment to making your vision heard. No matter the size or scale of your project, we treat it with the care and professionalism it deserves.
+      </p>
+      <p class="text-center mt-3 fw-bold">
+        Let's create something extraordinary together. Your sound journey starts here.
+      </p>
+    </div>
+  </section>
+  
+
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card card-custom h-100 text-center p-3">
+            <h5 class="text-primary">🎚️ Sound Engineering</h5>
+            <p>High-end recording and engineering solutions for artists and creators.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100 text-center p-3">
+            <h5 class="text-success">🎧 Audio Editing</h5>
+            <p>Enhance, clean, and perfect your audio recordings with precision.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100 text-center p-3">
+            <h5 class="text-danger">🎼 Mixing & Mastering</h5>
+            <p>Professional mixes and mastering for radio-ready quality sound.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100 text-center p-3">
+            <h5 class="text-warning">🎤 Voice Over Recording</h5>
+            <p>Studio-quality voice over services for ads, films, and audiobooks.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100 text-center p-3">
+            <h5 class="text-info">📀 Background Score (BGM)</h5>
+            <p>Original compositions and cinematic scoring for short films and videos.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-custom h-100 text-center p-3">
+            <h5 class="text-secondary">🎬 Music Video Production</h5>
+            <p>Complete production services for professional music videos and promos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Events and Services Section -->
+<section class="events-services py-5" id="events">
+    <div class="container text-center">
+      <h2 class="section-title">Events & Music Services</h2>
+      <p class="lead">
+        We offer live music performances and complete entertainment solutions for all types of events:
+      </p>
+
+      <div class="row g-4">
+
+         <!-- Birthday Parties -->
+         <div class="col-md-4">
+            <div class="card">
+              <img src="bday.jpg" class="card-img-top" alt="Birthday Party">
+              <div class="card-body">
+                <h5 class="card-title text-center">🎉 Birthday Parties</h5>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Engagements & Weddings -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="wedding.jpg" class="card-img-top" alt="Weddings">
+              <div class="card-body">
+                <h5 class="card-title text-center">💍 Engagements & Weddings</h5>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Family Functions & Cultural Events -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="cultural.jpg" class="card-img-top" alt="Family Functions">
+              <div class="card-body">
+                <h5 class="card-title text-center">🎊 Family & Cultural Events</h5>
+              </div>
+            </div>
+          </div>
+           <!-- Festivals -->
+           <div class="col-md-4">
+            <div class="card">
+              <img src="festivals.jpg" class="card-img-top" alt="Concerts">
+              <div class="card-body">
+                <h5 class="card-title text-center">🎆 Festivals</h5>
+              </div>
+            </div>
+          </div>
+          <!-- Live Concerts -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="live_concert.jpg" class="card-img-top" alt="Concerts">
+              <div class="card-body">
+                <h5 class="card-title text-center">🎤 Live Concerts & Stage Shows</h5>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Background Music & Sound Setup -->
+          <div class="col-md-4">
+            <div class="card">
+              <img src="music_setup.jpg" class="card-img-top" alt="Music Setup">
+              <div class="card-body">
+                <h5 class="card-title text-center">🎼Background Music & Sound Setup</h5>
+              </div>
+            </div>
+          </div>
+  
+  
+      </div>
+      <p class="mt-3">
+        We provide soulful singing, instrumental performances, and DJ setups tailored to your event needs.
+      </p>
+      <a href="#contact" class="btn btn-gradient mt-4">Book Now</a>
+    </div>
+  </section>
+  
+  
+  
+<!-- Portfolio (YouTube Videos) -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="section-title">Our Work (YouTube)</h2>
+  
+      <!-- Own Album Songs -->
+      <div class="work-category" id="own-album">
+        <h3>Own Album Songs</h3>
+        <div class="row g-4" id="own-album-links">
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/XmrFVKoIYTA" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/TQS5J-01t4A" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/GL5lXRVCINI" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Own BGM -->
+      <div class="work-category" id="own-bgm">
+        <h3>Own BGM</h3>
+        <div class="row g-4" id="own-bgm-links">
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/bphn35YSsFg" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/PrRfDs02gps" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dIKGFk5br14" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Remix -->
+      <div class="work-category" id="remix">
+        <h3>Remix</h3>
+        <div class="row g-4" id="remix-links">
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/inZMKP9aQEY" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/CS2weXG_C14" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/zv6FfD5zT9Q" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Songs -->
+      <div class="work-category" id="songs">
+        <h3>Songs</h3>
+        <div class="row g-4" id="songs-links">
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/wcUbgJ6xDmw" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/fp9ysRhFY-k" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/whK9YPo8Ujg" title="YouTube video" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <a href="https://www.youtube.com/@prasanthmusical69" target="_blank" class="btn btn-gradient mt-3">See More</a>
+      </div>
+  
+    </div>
+  </section>
+  
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <form class="mx-auto" style="max-width: 600px;">
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Your Name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="your@email.com">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="4" placeholder="Your message..."></textarea>
+      </div>
+      <button class="btn btn-gradient px-4 py-2">Send</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p><strong>Address:</strong> 123 Think Verse Music studio, Thirumullaivoyal, Ambattur, Chennai - 600062</p>
+          <p><strong>Phone:</strong> 8608303569</p>
+          <p><strong>Email:</strong> contact@thinkversemusic.com</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Follow Us</h5>
+            <div class="social-links">
+              <a href="https://www.facebook.com" class="social-link facebook" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+              <a href="https://www.instagram.com" class="social-link instagram" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+              <a href="https://www.youtube.com/@prasanthmusical69" class="social-link youtube" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+            </div>
+          </div>
+          
+        <div class="col-md-4">
+          <h5>Our Location</h5>
+          <!-- Map Location Embed -->
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.269354037994!2d-122.4194154846818!3d37.77492927975987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580e233fa9e29%3A0x621e207d905a0e7a!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1631225223222!5m2!1sen!2sus" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-white" style="background: #1c2331; padding: 10px;">&copy; 2025 Think Verse Music. All Rights Reserved.</p>
+  </footer>
+  
+<!-- Offer Popup -->
+<div id="offerPopup">
+    <strong>🎉 Full Movie - 30% OFF!</strong><br>
+    Limited Time Offer!
+  </div>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Floating Icons Script -->
+<script>
+const musicalIcons = ['🎵', '🎶', '🎧', '🎤', '🎸', '🥁', '🎷', '🎻'];
+  let maxIcons = 30;
+
+  function createFloatingIcon() {
+    const currentIcons = document.querySelectorAll('.floating-icon').length;
+    if (currentIcons >= maxIcons) return;
+
+    const icon = document.createElement('div');
+    icon.className = 'floating-icon';
+    icon.textContent = musicalIcons[Math.floor(Math.random() * musicalIcons.length)];
+    icon.style.left = Math.random() * 100 + 'vw';
+    icon.style.top = '100vh';
+    icon.style.fontSize = (20 + Math.random() * 20) + 'px';
+
+    document.body.appendChild(icon);
+
+    icon.addEventListener('animationend', () => icon.remove());
+  }
+
+  setInterval(() => {
+    if (document.visibilityState === 'visible') {
+      createFloatingIcon();
+    }
+  }, 600);
+  setTimeout(() => {
+    const popup = document.getElementById('offerPopup');
+    if (popup) {
+      popup.style.display = 'none';
+    }
+  }, 10000); // Hide after 10 seconds
+</script>
+
+</body>
+</html>
