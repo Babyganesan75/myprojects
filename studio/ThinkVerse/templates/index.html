@@ -465,19 +465,19 @@
   {% csrf_token %}
   <div class="mb-3">
     <label class="form-label">Name</label>
-    <input type="text" class="form-control" name="name" required>
+    <input type="text" class="form-control" name="name" required placeholder="Your Name">
   </div>
   <div class="mb-3">
     <label class="form-label">Email</label>
-    <input type="email" class="form-control" name="email" required>
+    <input type="email" class="form-control" name="email" required placeholder="Your Email">
   </div>
   <div class="mb-3">
     <label class="form-label">Mobile Number</label>
-    <input type="number" class="form-control" name="mobile" required>
+    <input type="number" class="form-control" name="mobile" required placeholder="Your Mobile Number">
   </div>
   <div class="mb-3">
     <label class="form-label">Message</label>
-    <textarea class="form-control" name="message" rows="4" required></textarea>
+    <textarea class="form-control" name="message" rows="4" required placeholder="Your Message"></textarea>
   </div>
   <button type="submit" class="btn btn-gradient px-4 py-2">Send</button>
 </form>
